@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مطعم فاطمة</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sheet" id="sheet">
+ <div class="orn">✦ ✦ ✦</div>
+ <h1 class="brand">مطعم فاطمة</h1>
+ <div class="sub en">Fatma Restaurant</div>
+ <button class="pick" id="pick">اقترحلي أكلة</button>
+ <div class="res" id="res"><small>النهاردة جرّب</small><b id="rn"></b><button class="lnk" id="rate">أكلتها</button><button class="lnk" id="rmore">غيرها</button></div>
+ <div id="menu"></div>
+ <div class="form" id="form">
+  <input id="inp" placeholder="اسم الأكلة" autocomplete="off">
+  <select id="cat"><option>فطار</option><option selected>غدا</option><option>عشا</option><option>سناك</option></select>
+  <button id="add">إضافة للمنيو</button>
+ </div>
+ <div class="foot"><button class="lnk" id="tog">تعديل</button><div class="sub" id="sync" style="margin:8px 0 0;font-size:13px"></div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

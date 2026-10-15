@@ -1,0 +1,45 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6efe2;--paper:#fbf6ea;--ink:#2b2118;--muted:#8c7b66;--gold:#a67c2e;--line:#cdbb98;--fresh:#6b8e4e;--soon:#c98a3a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1713;--paper:#241f19;--ink:#efe4cf;--muted:#a09279;--gold:#d3a64b;--line:#4a3f30;--fresh:#8fb36f;--soon:#d9a05a}}
+:root[data-theme="dark"]{--bg:#1b1713;--paper:#241f19;--ink:#efe4cf;--muted:#a09279;--gold:#d3a64b;--line:#4a3f30;--fresh:#8fb36f;--soon:#d9a05a}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Amiri",Georgia,"Times New Roman",serif;padding:14px}
+.sheet{max-width:520px;margin:0 auto;background:var(--paper);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-8px;padding:30px 24px 26px;background-image:radial-gradient(var(--line) 0.6px,transparent 0.6px);background-size:14px 14px;background-position:0 0}
+.orn{text-align:center;color:var(--gold);letter-spacing:6px;font-size:14px}
+h1{text-align:center;font-size:38px;margin:6px 0 2px;font-weight:700;letter-spacing:1px}
+.sub{text-align:center;color:var(--muted);font-size:15px;margin-bottom:18px}
+.pick{display:block;margin:0 auto 6px;background:none;border:1px solid var(--gold);color:var(--gold);padding:8px 26px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;border-radius:2px}
+.res{display:none;text-align:center;margin:14px 0 4px;padding:14px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.res small{color:var(--muted);font-size:14px}
+.res b{display:block;font-size:26px;margin:2px 0 8px}
+.lnk{background:none;border:0;color:var(--muted);font:inherit;font-size:15px;text-decoration:underline;cursor:pointer;margin:0 8px}
+h2{text-align:center;font-size:24px;margin:30px 0 12px;font-weight:700;color:var(--gold)}
+h2:before,h2:after{content:"";display:inline-block;width:28px;border-top:1px solid var(--gold);vertical-align:middle;margin:0 10px}
+.item{display:flex;align-items:baseline;gap:6px;padding:5px 0;font-size:19px}
+.item .n{white-space:nowrap}
+.item .dots{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px);min-width:12px}
+.item .t{font-size:14px;color:var(--muted);white-space:nowrap}
+.item .t i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-inline-start:5px;background:var(--fresh)}
+.item .t i.soon{background:var(--soon)}
+.ctl{display:none;gap:4px}
+.edit .ctl{display:inline-flex}
+.ctl button{background:none;border:0;color:var(--muted);font:inherit;font-size:14px;cursor:pointer;padding:0 3px;text-decoration:underline}
+.empty{text-align:center;color:var(--muted);font-size:16px;padding:4px 0 0}
+.form{display:none;margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+.edit .form{display:block}
+.form input,.form select{font:inherit;font-size:17px;padding:8px 10px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:2px;width:100%;margin-bottom:8px}
+.form button{width:100%;background:var(--ink);color:var(--paper);border:0;padding:9px;font:inherit;font-size:17px;cursor:pointer;border-radius:2px}
+.foot{text-align:center;margin-top:24px}
+
+.brand{font-family:"Amiri",Georgia,serif;font-weight:700;font-size:46px;color:var(--ink);line-height:1.2;margin:6px 0 0;text-align:center}
+h2 svg{width:20px;height:20px;vertical-align:-3px;margin-inline-start:6px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{opacity:0;transform:scale(.92)}60%{transform:scale(1.03)}100%{opacity:1;transform:none}}
+.brand,.sub,.pick{animation:up .6s both}
+.sub{animation-delay:.1s}.pick{animation-delay:.2s}
+h2,.item,.empty{animation:up .5s both}
+.res.show{animation:pop .4s both}
+.pick{transition:background .2s,color .2s}.pick:active,.pick:hover{background:var(--gold);color:var(--paper)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.sub.en{font-family:Georgia,"Times New Roman",serif;letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold);margin:2px 0 20px;direction:ltr}
